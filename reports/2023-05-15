@@ -1,0 +1,62 @@
+
+## Testrapport Chatbot
+
+
+**Testare:** *Maria Olsson
+
+**Datum:** *2023-05-15 - 2023-05-15*
+
+### Testresultat
+
+| Krav     | Testfall     | Resultat    | Kommentar |
+| -------- | ------------ | ----------- | --------- |
+| *CB1*      | TC *1.0* | *Pass* | Applikationen använder vektordatabasen Pinecone och openAIs plugin Retrieval för embedding och skicka vidare till vektordatabas.|
+| *CB2* | TC *2.0* | *Pass* |Sparar meddelande-historik under en livscykel men finns semantiska svårigheter      |
+| *CB2.1* | TC *2.1* | *Pass* | Efter en refresh/ny session i browsern "minns" inte applikationen det som sagt innan. 
+| *CB2.2* | TC *2.2* | *Fail* | 20 frågor och svar i samma session fungerar och säkert fler då ingen implementation för stopp antal meddelanden finns.
+       | 
+   
+
+### Bilagor
+Bilaga TC1.0 
+Respons från Pincone databasen
+
+![[Pasted image 20230515201800.png]]
+
+Kontaktar OpenAIs plugin
+![[Pasted image 20230515140431.png]]
+![[Pasted image 20230515201716.png]]
+
+
+Bilaga TC2.0
+Under en Session, ger info för rätt OS vilket angetts tidigare
+![[Pasted image 20230516091737.png]]
+Under en Session, kan inte återge vad användaren jobbar med fastän det sagts i tidigare meddelande
+![[Pasted image 20230516091950.png]]
+
+Svarar på flera meddelanden efter vad användaren heter och ger rätt svar på en vag fråga om hen kan få låna en telefon för att använda Teams. Men däremot kan den inte svara på varifrån telefonen kommer fastän det har angetts tidigare.
+![[Pasted image 20230516194037.png]]
+
+
+Bilaga TC2.1
+Session 1, fråga om VPN
+![[Pasted image 20230515142039.png]]
+Session 2, "minns" att det var VPN i sessionen innan 
+![[Pasted image 20230515142226.png]]
+
+
+Session 1, användaren berättar sitt operativsystem
+![[Pasted image 20230516094451.png]]
+Session 2 , Minns inte användarens os i ny session
+![[Pasted image 20230516094624.png]]
+
+
+För varje session töms contexten
+![[Pasted image 20230516094748.png]]
+
+### Kommentar
+
+Applikationen "minns" inte att användaren har pratat om VPN i föregående session däremot gör den ett eget antagande om att det är VPN det handlar om. Bättre hade varit att om den bett om mer information för att kunna vara säker på vad användaren menar istället för att dra egna slutsatser, se bilaga TC2.1
+
+TC2 Verkar fungerar men context-rutan i applikationens ui uppdateras inte.
+Botten ger rätt information ibland när den får frågor om vad användaren heter eller jobbar med, det kan vara en semantisk svårighet från LLM snarare än att inte historik inte sparas. 
