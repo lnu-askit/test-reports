@@ -16,17 +16,16 @@ Testrapport  Webbskrapa
 
 ### Bilagor
 TC1.0 
-![[Pasted image 20230515170858.png]]
+<img src="/img/webbskrapa_TC1_230512.PNG" />
 
 TC2.0 Skrapar länkar från serviceportalen
-![[Pasted image 20230515172927.png]]
-![[Pasted image 20230515194708.png]]
+<img src="/img/webbskrapa_TC2_230512.PNG" />
+<img src="/img/webbskrapa_TC2bild2_230512.PNG" />
 
-![[Pasted image 20230515171921.png]]
+<img src="/img/webbskrapa_TC2bild3_230512.PNG" />
 TC3.0 och TC3.1 
-![[Pasted image 20230515193336.png]]
-
-![[Pasted image 20230515194837.png]]
+<img src="/img/webbskrapa_TC3_230512.PNG" />
+<img src="/img/webbskrapa_TC3bild2_230512.PNG" />
 ### Kommentar
 
 *Kommentar för hela rapporten, ta bort hela rubriken om detta lämnas tomt.*
