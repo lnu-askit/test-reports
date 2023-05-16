@@ -1,6 +1,6 @@
 Testrapport  Webbskrapa
 
-**Testare:** *Maria Olsson
+**Testare:** Maria Olsson
 
 **Datum:** *2023-05-15 - 2023-05-15*
 
