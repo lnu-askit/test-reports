@@ -26,6 +26,3 @@ TC2.0 Skrapar länkar från serviceportalen
 TC3.0 och TC3.1 
 <img src="/img/webbskrapa_TC3_230512.PNG" />
 <img src="/img/webbskrapa_TC3bild2_230512.PNG" />
-### Kommentar
-
-*Kommentar för hela rapporten, ta bort hela rubriken om detta lämnas tomt.*
